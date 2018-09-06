@@ -1,13 +1,12 @@
 <h2>My Heroes</h2>
 <ul class="people">
-  <li *ngFor = "let people of peoples"
-      [class.selected]="people == selectedPeople"
-      (click)="onSelect(people)">
-      <span class="badge">{{people.dni}}</span>
-      {{people.name}}    
-  </li>  
+  <li *ngFor = "let people of peoples">
+    <a routerLink="/detail/{{people.dni}}">
+      <span class="badge">{{people.dni}}</span>{{people.name}}
+    </a>
+  </li>
 </ul>
 
-<app-people-detail [people]="selectedPeople"></app-people-detail>
+
 
 
