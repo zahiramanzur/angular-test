@@ -1,4 +1,18 @@
 <h2>My Heroes</h2>
+
+<div>
+    <label>People dni:
+      <input #peopleDni />
+    </label>
+    <label>People name:
+        <input #peopleName />
+    </label>
+
+    <!-- (click) passes input value to add() and then clears the input -->
+    <button (click)="add(peopleDni.value); peopleDni.value='' && add(peopleName.value); peopleName.value=''">
+      add
+    </button>
+  </div>
 <ul class="people">
   <li *ngFor = "let people of peoples">
     <a routerLink="/detail/{{people.dni}}">
