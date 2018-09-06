@@ -1,0 +1,14 @@
+<div *ngIf="people">
+    <h2>{{people.name | uppercase}} Details</h2>
+      <div><span>DNI: </span>{{people.dni}}</div>
+      <div>
+        <label>Name:
+          <input [(ngModel)]="people.name" placeholder="name">
+        </label>
+        <br>
+        <label>Bios:
+            <input [(ngModel)]="people.bios" placeholder="bios">
+        </label>
+      </div>
+</div>
+  
